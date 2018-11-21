@@ -10,6 +10,12 @@
     "react",
     "react-native"
   ],
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "999.999.999", // React version, default to the latest React stable release
+    }
+  },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "rules": {
     "react-native/split-platform-components": 2,
