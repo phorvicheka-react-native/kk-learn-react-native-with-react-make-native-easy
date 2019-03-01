@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "padding": 20,
+    }
+  }
+>
+  <Text>
+     Please enter your note here
+  </Text>
+  <TextInput
+    allowFontScaling={true}
+    multiline={true}
+    onChangeText={[Function]}
+    style={
+      Array [
+        Object {
+          "borderColor": "gray",
+          "borderWidth": 1,
+          "height": 100,
+          "width": 200,
+        },
+        undefined,
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+</View>
+`;

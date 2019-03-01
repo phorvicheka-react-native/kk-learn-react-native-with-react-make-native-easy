@@ -9,7 +9,7 @@
 import React, {Component} from 'react';
 import Home from './app/components/Home/Home.component';
 
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
     return (      
       <Home/>
