@@ -6,11 +6,20 @@ exports[`Home component renders correctly 1`] = `
     Object {
       "alignItems": "center",
       "flex": 1,
-      "padding": 20,
+      "paddingVertical": 20,
     }
   }
 >
-  <Text>
+  <Text
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "fontSize": 14,
+        "fontWeight": "700",
+        "padding": 10,
+      }
+    }
+  >
      Please enter your note here
   </Text>
   <TextInput
@@ -20,102 +29,20 @@ exports[`Home component renders correctly 1`] = `
     style={
       Array [
         Object {
-          "borderColor": "gray",
-          "borderWidth": 1,
-          "height": 100,
-          "width": 200,
+          "fontSize": 14,
+          "fontWeight": "200",
         },
-        undefined,
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#f0f6f7",
+          "flex": 1,
+          "overflow": "scroll",
+          "padding": 20,
+        },
       ]
     }
     underlineColorAndroid="transparent"
     value=""
   />
-  <View>
-    <View
-      accessibilityRole="button"
-      accessibilityStates={Array []}
-      accessible={true}
-      isTVSelectable={true}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Array [
-            Object {},
-          ]
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#007AFF",
-                "fontSize": 18,
-                "padding": 8,
-                "textAlign": "center",
-              },
-            ]
-          }
-        >
-          +
-        </Text>
-      </View>
-    </View>
-    <Text>
-      Count: 
-      5
-    </Text>
-    <View
-      accessibilityRole="button"
-      accessibilityStates={Array []}
-      accessible={true}
-      isTVSelectable={true}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Array [
-            Object {},
-          ]
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#007AFF",
-                "fontSize": 18,
-                "padding": 8,
-                "textAlign": "center",
-              },
-            ]
-          }
-        >
-          -
-        </Text>
-      </View>
-    </View>
-  </View>
 </View>
 `;
