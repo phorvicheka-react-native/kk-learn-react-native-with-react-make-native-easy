@@ -105,7 +105,7 @@ exports[`Home component renders correctly 1`] = `
           }
         }
       >
-        20
+        0
          characters
       </Text>
     </View>
