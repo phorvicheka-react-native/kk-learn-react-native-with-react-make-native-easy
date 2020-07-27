@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home component renders correctly 1`] = `
+exports[`My Connected React-Redux Component should render with given state from Redux store 1`] = `
 <View
   style={
     Object {

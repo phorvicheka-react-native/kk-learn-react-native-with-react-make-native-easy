@@ -4,9 +4,10 @@ exports[`Counter component renders correctly 1`] = `
 <View>
   <View
     accessibilityRole="button"
-    accessibilityStates={Array []}
+    accessibilityState={Object {}}
     accessible={true}
-    isTVSelectable={true}
+    focusable={true}
+    onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -32,7 +33,7 @@ exports[`Counter component renders correctly 1`] = `
             Object {
               "color": "#007AFF",
               "fontSize": 18,
-              "padding": 8,
+              "margin": 8,
               "textAlign": "center",
             },
           ]
@@ -47,9 +48,10 @@ exports[`Counter component renders correctly 1`] = `
   </Text>
   <View
     accessibilityRole="button"
-    accessibilityStates={Array []}
+    accessibilityState={Object {}}
     accessible={true}
-    isTVSelectable={true}
+    focusable={true}
+    onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -75,7 +77,7 @@ exports[`Counter component renders correctly 1`] = `
             Object {
               "color": "#007AFF",
               "fontSize": 18,
-              "padding": 8,
+              "margin": 8,
               "textAlign": "center",
             },
           ]
