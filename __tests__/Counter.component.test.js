@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
+import {shallow} from 'enzyme';
 import Counter from '../app/components/Counter/Counter.component';
 
 describe('Counter component', () => {

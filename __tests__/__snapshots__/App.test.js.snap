@@ -35,7 +35,7 @@ exports[`My Connected React-Redux Component should render with given state from 
       }
     }
     underlineColorAndroid="transparent"
-    value=""
+    value="sample title"
   />
   <Text
     style={
@@ -70,7 +70,7 @@ exports[`My Connected React-Redux Component should render with given state from 
       ]
     }
     underlineColorAndroid="transparent"
-    value=""
+    value="sample text"
   />
   <View
     style={
@@ -107,7 +107,7 @@ exports[`My Connected React-Redux Component should render with given state from 
           }
         }
       >
-        0
+        11
          characters
       </Text>
     </View>

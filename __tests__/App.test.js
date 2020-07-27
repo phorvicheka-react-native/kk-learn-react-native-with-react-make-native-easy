@@ -16,6 +16,10 @@ describe('My Connected React-Redux Component', () => {
   beforeEach(() => {
     store = mockStore({
       test: 'sample text',
+      content: {
+        title: 'sample title',
+        text: 'sample text'
+      }
     });
  
     component = renderer.create(

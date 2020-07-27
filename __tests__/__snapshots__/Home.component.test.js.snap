@@ -25,7 +25,6 @@ exports[`Home component renders correctly 1`] = `
   </Text>
   <TextInput
     allowFontScaling={true}
-    onChangeText={[Function]}
     rejectResponderTermination={true}
     style={
       Object {
@@ -35,7 +34,6 @@ exports[`Home component renders correctly 1`] = `
       }
     }
     underlineColorAndroid="transparent"
-    value=""
   />
   <Text
     style={
@@ -53,7 +51,6 @@ exports[`Home component renders correctly 1`] = `
   <TextInput
     allowFontScaling={true}
     multiline={true}
-    onChangeText={[Function]}
     rejectResponderTermination={true}
     style={
       Array [
@@ -70,7 +67,6 @@ exports[`Home component renders correctly 1`] = `
       ]
     }
     underlineColorAndroid="transparent"
-    value=""
   />
   <View
     style={
