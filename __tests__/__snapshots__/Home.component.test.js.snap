@@ -4,9 +4,10 @@ exports[`Home component renders correctly 1`] = `
 <View
   style={
     Object {
-      "alignItems": "center",
       "flex": 1,
-      "paddingVertical": 20,
+      "flexDirection": "column",
+      "justifyContent": "space-between",
+      "paddingTop": 20,
     }
   }
 >
@@ -28,7 +29,7 @@ exports[`Home component renders correctly 1`] = `
     style={
       Object {
         "alignSelf": "stretch",
-        "backgroundColor": "#f0f6f7",
+        "backgroundColor": "#ebe9e9",
         "padding": 10,
       }
     }
@@ -60,7 +61,7 @@ exports[`Home component renders correctly 1`] = `
         },
         Object {
           "alignSelf": "stretch",
-          "backgroundColor": "#f0f6f7",
+          "backgroundColor": "#ebe9e9",
           "flex": 1,
           "padding": 10,
         },
@@ -69,5 +70,45 @@ exports[`Home component renders correctly 1`] = `
     underlineColorAndroid="transparent"
     value=""
   />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontWeight": "700",
+            "padding": 10,
+          }
+        }
+      >
+        Save
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontSize": 12,
+            "padding": 10,
+          }
+        }
+      >
+        20
+         characters
+      </Text>
+    </View>
+  </View>
 </View>
 `;
