@@ -56,23 +56,21 @@ exports[`My Connected React-Redux Component should render with given state from 
     onChangeText={[Function]}
     rejectResponderTermination={true}
     style={
-      Array [
-        Object {
-          "fontSize": 14,
-          "fontWeight": "200",
-        },
-        Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#ebe9e9",
-          "flex": 1,
-          "padding": 10,
-        },
-      ]
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#ebe9e9",
+        "flex": 1,
+        "fontSize": 14,
+        "fontWeight": "200",
+        "padding": 10,
+        "textAlignVertical": "top",
+      }
     }
     underlineColorAndroid="transparent"
     value="sample text"
   />
   <View
+    onLayout={[Function]}
     style={
       Object {
         "alignItems": "center",
@@ -90,6 +88,7 @@ exports[`My Connected React-Redux Component should render with given state from 
       }
     >
       <Text
+        onPress={[Function]}
         style={
           Object {
             "fontWeight": "700",

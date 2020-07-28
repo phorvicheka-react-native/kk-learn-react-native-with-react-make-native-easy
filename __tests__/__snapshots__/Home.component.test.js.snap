@@ -53,22 +53,20 @@ exports[`Home component renders correctly 1`] = `
     multiline={true}
     rejectResponderTermination={true}
     style={
-      Array [
-        Object {
-          "fontSize": 14,
-          "fontWeight": "200",
-        },
-        Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#ebe9e9",
-          "flex": 1,
-          "padding": 10,
-        },
-      ]
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#ebe9e9",
+        "flex": 1,
+        "fontSize": 14,
+        "fontWeight": "200",
+        "padding": 10,
+        "textAlignVertical": "top",
+      }
     }
     underlineColorAndroid="transparent"
   />
   <View
+    onLayout={[Function]}
     style={
       Object {
         "alignItems": "center",
@@ -86,6 +84,7 @@ exports[`Home component renders correctly 1`] = `
       }
     >
       <Text
+        onPress={[Function]}
         style={
           Object {
             "fontWeight": "700",
