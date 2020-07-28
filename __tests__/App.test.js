@@ -6,8 +6,13 @@ import App from '../App.js';
 import renderer from 'react-test-renderer';
 import {Provider} from 'react-redux';
 import configureStore from 'redux-mock-store';
+import offlineStorage from '../app/utils/offline.utils.js';
+import mockAsyncStorage from '@react-native-community/async-storage/jest/async-storage-mock';
 
 const mockStore = configureStore([]);
+
+jest.mock('@react-native-community/async-storage', () => mockAsyncStorage);
+import AsyncStorage from '@react-native-community/async-storage';
 
 describe('My Connected React-Redux Component', () => {
   let store;
@@ -29,7 +34,10 @@ describe('My Connected React-Redux Component', () => {
     ).toJSON();
   });
  
-  it('should render with given state from Redux store', () => {
+  it('should render with given state from Redux store', () => {    
     expect(component).toMatchSnapshot();
+    AsyncStorage.getItem = jest.fn();
+    AsyncStorage.getItem(offlineStorage.keys.NOTES);
+    expect(AsyncStorage.getItem).toBeCalledWith(offlineStorage.keys.NOTES);
   });
 });
