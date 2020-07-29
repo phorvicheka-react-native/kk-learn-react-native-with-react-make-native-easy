@@ -107,5 +107,34 @@ exports[`Home component renders correctly 1`] = `
       </Text>
     </View>
   </View>
+  <View
+    accessible={true}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "opacity": 1,
+        "padding": 15,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontWeight": "700",
+        }
+      }
+    >
+      About Us
+    </Text>
+  </View>
 </View>
 `;

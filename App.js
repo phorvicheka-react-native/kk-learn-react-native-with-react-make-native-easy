@@ -7,12 +7,12 @@
  */
 
 import React, {Component} from 'react';
-import HomePage from './app/pages/Home.page';
+import Router from './app/routes';
 
 class App extends Component {
   render () {
     return (
-      <HomePage />
+      <Router />
     );
   }
 }
