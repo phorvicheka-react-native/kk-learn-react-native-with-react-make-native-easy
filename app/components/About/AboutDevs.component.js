@@ -3,9 +3,6 @@ import {View, Text} from 'react-native';
 import styles from './AboutDevs.styles.js';
 
 class AboutDevs extends Component {
-  static navigationOptions = {
-    title: 'About Devs',
-  };
 
   render () {
     return (

@@ -5,9 +5,6 @@ import PropTypes from 'prop-types';
 import {withNavigation} from 'react-navigation';
 
 class AboutApp extends Component {
-  static navigationOptions = {
-    title: 'About App',
-  };
 
   render () {
     const {navigation} = this.props;
