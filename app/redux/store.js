@@ -2,10 +2,16 @@ import {createStore, compose, applyMiddleware} from 'redux';
 // import someReduxMiddleware from 'some-redux-middleware';
 // import someOtherReduxMiddleware from 'some-other-redux-middleware';
 import rootReducer from './reducers/root.reducer';
+import {createReactNavigationReduxMiddleware} from 'react-navigation-redux-helpers';
+
+const reactNavigationReduxMiddleware = createReactNavigationReduxMiddleware(
+  (state) => state.nav
+);
 
 const middleware = [
   // someReduxMiddleware,
   // someOtherReduxMiddleware
+  reactNavigationReduxMiddleware
 ];
 
 const composeEnhancers =

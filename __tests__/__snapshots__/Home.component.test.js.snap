@@ -59,6 +59,7 @@ exports[`Home component renders correctly 1`] = `
         "flex": 1,
         "fontSize": 14,
         "fontWeight": "200",
+        "minHeight": 100,
         "padding": 10,
         "textAlignVertical": "top",
       }

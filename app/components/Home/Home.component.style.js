@@ -22,6 +22,7 @@ export default StyleSheet.create({
   },
   textArea: {
     ...textInput,
+    minHeight: 100,
     flex: 1,
     textAlignVertical: 'top',
     fontSize: theme.FONT_SIZE_MEDIUM,

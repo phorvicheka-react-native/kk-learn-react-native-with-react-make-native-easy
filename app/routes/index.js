@@ -1,10 +1,11 @@
-import {createAppContainer} from 'react-navigation';
+import {createReduxContainer} from 'react-navigation-redux-helpers';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import HomePage from '../pages/Home.page';
 import AboutApp from '../components/About/AboutApp.component';
 import AboutDevs from '../components/About/AboutDevs.component';
 import theme from '../styles/theme.style.js';
+import {connect} from 'react-redux';
 
 const AboutRoutesTabNavigator = createBottomTabNavigator(
   {
@@ -30,9 +31,13 @@ const AboutRoutesTabNavigator = createBottomTabNavigator(
   }
 );
 
-const RootStack = createStackNavigator({
+export const AppNavigator = createStackNavigator({
   home: HomePage,
   about: AboutRoutesTabNavigator,
 });
 
-export default createAppContainer(RootStack);
+const App = createReduxContainer(AppNavigator);
+const mapStateToProps = (state) => ({
+  state: state.nav,
+});
+export default connect(mapStateToProps)(App);
