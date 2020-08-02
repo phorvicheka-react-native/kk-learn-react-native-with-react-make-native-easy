@@ -10,6 +10,7 @@
     "coverage": "jest --verbose --coverage && open ./coverage/lcov-report/index.html",
     "ios": "react-native run-ios",
     "android": "cd android && .\\gradlew clean && cd .. && react-native run-android",
+    "android:release": "cd android && .\\gradlew clean && cd .. && react-native run-android --variant=release",
     "lint": "eslint app/",
     "lint:fix": "eslint app/ --fix"
   },

@@ -74,6 +74,7 @@ import com.android.build.OutputFile
 
 project.ext.react = [
     entryFile: "index.js",
+    bundleAssetName: "index.android.bundle",
     // Hermes JSC ?
     enableHermes: false,
 ]
@@ -95,6 +96,11 @@ def enableSeparateBuildPerCPUArchitecture = false
  */
 def enableProguardInReleaseBuilds = false
 
+def appID = System.getenv("ANDROID_APP_ID") ?: "com.react_made_native_easy"
+def vCode = System.getenv("BUILD_NUMBER") ?: "01"
+def vName = System.getenv("BUILD_NAME") ?: "1.0.0"
+
+
 def jscFlavor = 'org.webkit:android-jsc:+'
 def enableHermes = project.ext.react.get("enableHermes", false);
 
@@ -103,11 +109,11 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.react_made_native_easy"
+        applicationId appID
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode Integer.parseInt(vCode)
+        versionName vName
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
@@ -120,10 +126,21 @@ android {
             include "armeabi-v7a", "x86"
         }
     }
+    signingConfigs {
+     release {
+         if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
+             storeFile file(MYAPP_RELEASE_STORE_FILE)
+             storePassword MYAPP_RELEASE_STORE_PASSWORD
+             keyAlias MYAPP_RELEASE_KEY_ALIAS
+             keyPassword MYAPP_RELEASE_KEY_PASSWORD
+         }
+      }
+    }
     buildTypes {
         release {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            signingConfig signingConfigs.release
         }
     }
     // applicationVariants are e.g. debug, release
