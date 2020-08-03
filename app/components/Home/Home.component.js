@@ -5,6 +5,15 @@ import Notes from '../Notes/Notes.component.js';
 import Touchable from 'react-native-platform-touchable';
 import PropTypes from 'prop-types';
 
+// Using Custom Icon
+import {createIconSetFromIcoMoon} from 'react-native-vector-icons';
+import icoMoonConfig from '../../assets/selection.json';
+const Icon = createIconSetFromIcoMoon(icoMoonConfig);
+
+// Using MaterialIcons
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+const EditIcon = <MaterialIcons name='edit' size={18} />;
+
 class Home extends Component {
   addNote = () => {
     const {saveNote, title, text} = this.props;
@@ -19,7 +28,7 @@ class Home extends Component {
         <Text style={styles.titleHeading}> Note Title</Text>
         <TextInput style={styles.titleTextInput}
           onChangeText={setTitle} value={title} />
-        <Text style={styles.textAreaTitle}> Please type your note below </Text>
+        <Text style={styles.textAreaTitle}>{EditIcon} Please type your note below <Icon name='pencil' size={15}/></Text>
         <TextInput style={styles.textArea} multiline = {true}
           onChangeText={setText} value={text}/>
         <KeyboardAvoidingView style={styles.bottomBar}>

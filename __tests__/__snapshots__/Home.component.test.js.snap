@@ -46,7 +46,47 @@ exports[`Home component renders correctly 1`] = `
       }
     }
   >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": undefined,
+            "fontSize": 18,
+          },
+          undefined,
+          Object {
+            "fontFamily": "Material Icons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
      Please type your note below 
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": undefined,
+            "fontSize": 15,
+          },
+          undefined,
+          Object {
+            "fontFamily": "icomoon",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
   </Text>
   <TextInput
     allowFontScaling={true}
