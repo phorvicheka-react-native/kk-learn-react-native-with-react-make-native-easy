@@ -1,0 +1,15 @@
+{
+  "NAV_HEADER_TEXT_HOME": "HOME",
+  "HOME_greeting": "Hello %{name}",
+  "HOME_noteTitle": "Note Title",
+  "HOME_pleaseTypeYourNote": "Please type your note below",
+  "HOME_startTakingNotes": "Start taking notes",
+  "HOME_save": "Save",
+  "HOME_characters": "chacters",
+  "HOME_aboutUs": "About Us",
+  "ABOUT_us": "About Us",
+  "ABOUT_theApp": "About the app",
+  "ABOUT_theCreators": "About the Creators",
+  "ABOUT_theAppDesc": "About the app",
+  "ABOUT_theCreatorsDesc": "About the Creators"
+}

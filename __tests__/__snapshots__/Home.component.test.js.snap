@@ -21,7 +21,9 @@ exports[`Home component renders correctly 1`] = `
       }
     }
   >
-     Note Title
+    HOME note title
+     
+    HOME greeting
   </Text>
   <TextInput
     allowFontScaling={true}
@@ -66,7 +68,7 @@ exports[`Home component renders correctly 1`] = `
     >
       
     </Text>
-     Please type your note below 
+    HOME please type your note
     <Text
       allowFontScaling={false}
       style={
@@ -133,7 +135,7 @@ exports[`Home component renders correctly 1`] = `
           }
         }
       >
-        Save
+        HOME save
       </Text>
       <Text
         style={
@@ -144,7 +146,8 @@ exports[`Home component renders correctly 1`] = `
         }
       >
         0
-         characters
+         
+        HOME characters
       </Text>
     </View>
   </View>
@@ -174,7 +177,7 @@ exports[`Home component renders correctly 1`] = `
         }
       }
     >
-      About Us
+      HOME about us
     </Text>
   </View>
 </View>
