@@ -18,7 +18,7 @@ class App extends Component {
 
   constructor (props) {
     super(props);
-    setI18nConfigByRNLocalize();
+    setI18nConfigByRNLocalize(this.props.currentLanguage);
     this.props.getNotesFromOfflineStorage();
     this.props.setSelectedLanguageFromOfflineStorage();
   }

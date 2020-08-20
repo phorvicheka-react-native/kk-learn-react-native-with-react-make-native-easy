@@ -21,10 +21,6 @@ const translationGetters = {
 };
 
 export const setI18njsConfig = (languageTag) => {
-  if (i18n.locale === languageTag) {
-    return;
-  }
-
   // clear translation cache
   translate.cache.clear();
   // set i18n-js config
@@ -59,9 +55,12 @@ export const findBestAvailableLanguage = () => {
 };
 
 // set I18njs config according to the RNLocalize's findBestAvailableLanguage
-export const setI18nConfigByRNLocalize = () => {
+export const setI18nConfigByRNLocalize = (languageTagParam) => {
   // find best available language with RNLocalize
-  const {languageTag, isRTL} = findBestAvailableLanguage();
+  let {languageTag, isRTL} = findBestAvailableLanguage();
+  if (languageTagParam) {
+    languageTag = languageTagParam;
+  }
   // update layout direction
   I18nManager.forceRTL(isRTL);
   setI18njsConfig(languageTag);
