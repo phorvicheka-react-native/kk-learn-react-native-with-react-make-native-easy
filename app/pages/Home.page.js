@@ -5,6 +5,7 @@ import {setTitle, setText, addNote} from '../redux/actions/index.actions';
 import Home from '../components/Home/Home.component';
 import offlineStorage from '../utils/offline.utils.js';
 import {NavigationActions} from 'react-navigation';
+import {toggleLanguage} from '../redux/thunks/index.thunks';
 
 class HomePage extends Component {
   static navigationOptions = {
@@ -16,9 +17,9 @@ class HomePage extends Component {
   }
 
   render () {
-    const {setTitle, setText, title, text, saveNote, notes} = this.props;
+    const {setTitle, setText, title, text, saveNote, notes, currentLanguage, toggleLanguage} = this.props;
     return (
-      <Home onAboutPress={this.onAboutPress} setTitle={setTitle} notes={notes} saveNote={saveNote} setText={setText} title={title} text={text} />
+      <Home toggleLanguage={toggleLanguage} currentLanguage={currentLanguage} onAboutPress={this.onAboutPress} setTitle={setTitle} notes={notes} saveNote={saveNote} setText={setText} title={title} text={text} />
     );
   }
 }
@@ -30,13 +31,16 @@ HomePage.propTypes = {
   title: PropTypes.string,
   text: PropTypes.string,
   notes: PropTypes.array,
-  navigation: PropTypes.any
+  navigation: PropTypes.any,
+  currentLanguage: PropTypes.string,
+  toggleLanguage: PropTypes.func,
 };
 
 const mapStateToProps = (state) => ({
   title: state.content.title,
   text: state.content.text,
-  notes: state.notes
+  notes: state.notes,
+  currentLanguage: state.userPreferences.language
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -53,7 +57,8 @@ const mapDispatchToProps = (dispatch) => ({
         params: {message: 'Navigate from home after saving note.'},
       })
     );
-  }
+  },
+  toggleLanguage: () => dispatch(toggleLanguage()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

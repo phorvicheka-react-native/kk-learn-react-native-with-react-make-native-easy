@@ -4,6 +4,7 @@ import content from './content.reducer';
 import notes from './notes.reducer';
 import {createNavigationReducer} from 'react-navigation-redux-helpers';
 import {AppNavigator} from '../../routes';
+import userPreferences from './userPreferences.reducer';
 
 const navReducer = createNavigationReducer(AppNavigator);
 
@@ -12,4 +13,5 @@ export default combineReducers({
   content,
   notes,
   nav: navReducer,
+  userPreferences,
 });

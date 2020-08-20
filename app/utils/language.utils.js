@@ -29,11 +29,11 @@ export const setI18njsConfig = (languageTag) => {
   translate.cache.clear();
   // set i18n-js config
   // Lazy load according to languageTag
-  // i18n.translations = {[languageTag]: translationGetters[languageTag]()};
+  i18n.translations = {[languageTag]: translationGetters[languageTag]()};
   // Load all languages files
-  Object.keys(translationGetters).forEach((languageTag) => {
+  /* Object.keys(translationGetters).forEach((languageTag) => {
     i18n.translations[languageTag] = translationGetters[languageTag]();
-  });  
+  }); */  
   i18n.locale = languageTag;
 };
 

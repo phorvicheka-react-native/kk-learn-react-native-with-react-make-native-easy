@@ -25,6 +25,43 @@ exports[`Home component renders correctly 1`] = `
      
     HOME greeting
   </Text>
+  <View
+    accessible={true}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#ebe9e9",
+        "borderColor": undefined,
+        "borderRadius": 5,
+        "borderWidth": 1,
+        "elevation": 2,
+        "opacity": 1,
+        "padding": 10,
+        "position": "absolute",
+        "right": 10,
+        "top": 15,
+        "width": 40,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "alignSelf": "center",
+          "fontSize": 14,
+          "fontWeight": "700",
+          "padding": 0,
+        }
+      }
+    />
+  </View>
   <TextInput
     allowFontScaling={true}
     rejectResponderTermination={true}

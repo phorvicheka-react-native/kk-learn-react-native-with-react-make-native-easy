@@ -10,6 +10,8 @@ import React, {Component} from 'react';
 import * as RNLocalize from 'react-native-localize';
 import Router from './app/routes';
 import {setI18nConfigByRNLocalize} from './app/utils/language.utils';
+import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 
 class App extends Component {
 
@@ -32,10 +34,19 @@ class App extends Component {
   };
 
   render () {
+    const {currentLanguage} = this.props;
     return (
-      <Router screenProps={{language: 'kh'}}/>
+      <Router screenProps={{language: currentLanguage}}/>
     );
   }
 }
 
-export default App;
+App.propTypes = {
+  currentLanguage: PropTypes.string,
+};
+
+const mapStateToProps = (state) => ({
+  currentLanguage: state.userPreferences.language
+});
+
+export default connect(mapStateToProps)(App);
