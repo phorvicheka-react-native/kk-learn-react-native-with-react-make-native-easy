@@ -1,9 +1,11 @@
 import AsyncStorage from '@react-native-community/async-storage';
 
 const keys = {
-  'NOTES': 'notes'
+  'NOTES': 'notes',
+  'SELECTED_LANGUAGE': 'selectedLanguage',
 };
 
+// Reading object value
 const get = async (storageKey) => {
   try {
     const jsonValue = await AsyncStorage.getItem(storageKey);
@@ -13,6 +15,7 @@ const get = async (storageKey) => {
   }
 };
 
+// Storing object value
 const set = async (storageKey, data) => {
   try {
     const jsonValue = JSON.stringify(data);
@@ -29,6 +32,35 @@ const addNote = async (newNote) => {
   return set(keys.NOTES, newNotes);
 };
 
+// Storing string value
+const setStringValue = async (storageKey, value) => {
+  try {
+    await AsyncStorage.setItem(storageKey, value);
+  } catch (e) {
+    // saving error
+  }
+};
+
+// Reading string value
+const getStringValue = async (storageKey) => {
+  try {
+    const value = await AsyncStorage.getItem(storageKey);
+    if (value !== null) {
+      // value previously stored
+      return value;
+    }
+  } catch (e) {
+    // error reading value
+  }
+};
+
+const addSelectedLanguage = async (selectedlanguage) => {
+  const localLanguage = await getStringValue(keys.SELECTED_LANGUAGE);
+  if (selectedlanguage !== localLanguage) {
+    return setStringValue(keys.SELECTED_LANGUAGE, selectedlanguage);
+  }
+};
+
 const clear = AsyncStorage.clear;
 
 module.exports = {
@@ -36,5 +68,8 @@ module.exports = {
   set,
   get,
   addNote,
+  setStringValue,
+  getStringValue,
+  addSelectedLanguage,
   clear
 };
